@@ -5,6 +5,6 @@ from typing import List, Union, Tuple, Callable
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Returns fucntion."""
-    def mul(multiplier: float):
-        return multiplier * multiplier
+    def mul(a):
+        return a * a
     return mul
