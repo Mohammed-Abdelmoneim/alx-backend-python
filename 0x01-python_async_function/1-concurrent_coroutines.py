@@ -14,4 +14,9 @@ async def wait_n(n: int, max_delay: int) -> List:
         res = await wait_random(max_delay)
         ls.append(res)
         i = i + 1
+    for i in range(0, len(ls)):
+        for j in range(i+1, len(ls)):
+            if ls[i] >= ls[j]:
+                ls[i], ls[j] = ls[j], ls[i]
+
     return ls
